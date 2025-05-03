@@ -1,0 +1,18 @@
+[
+    {
+      "name": "Laptop",
+      "price": 999.99,
+      "image": "https://via.placeholder.com/150?text=Laptop"
+    },
+    {
+      "name": "Phone",
+      "price": 499.99,
+      "image": "https://via.placeholder.com/150?text=Phone"
+    },
+    {
+      "name": "Headphones",
+      "price": 199.99,
+      "image": "https://via.placeholder.com/150?text=Headphones"
+    }
+  ]
+  

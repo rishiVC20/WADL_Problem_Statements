@@ -1,0 +1,18 @@
+<!-- <p>profile works!</p>
+<h2>User Profile</h2>
+<div *ngIf="user">
+  <p><strong>Name:</strong> {{ user.name }}</p>
+  <p><strong>Email:</strong> {{ user.email }}</p>
+  <p><strong>Username:</strong> {{ user.username }}</p>
+</div> -->
+
+
+<h2>User Profile</h2>
+<div *ngIf="user; else loginMsg">
+  <p><strong>Name:</strong> {{ user.name }}</p>
+  <p><strong>Email:</strong> {{ user.email }}</p>
+  <p><strong>Username:</strong> {{ user.username }}</p>
+</div>
+<ng-template #loginMsg>
+  <p>Please login to view profile.</p>
+</ng-template>
