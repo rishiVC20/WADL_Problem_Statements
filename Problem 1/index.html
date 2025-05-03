@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Responsive Product Catalog</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h2>Product Catalog</h2>
+
+  <table id="productTable">
+    <thead>
+      <tr>
+        <th>Product Image</th>
+        <th>Product Name</th>
+        <th>Price (INR ₹)</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody id="tableBody">
+      <!-- Populated by JS -->
+    </tbody>
+  </table>
+
+  <div class="pagination">
+    <strong>Pagination Controls:</strong><br>
+    <button onclick="prevPage()" id="prevBtn">⬅ Previous</button>
+    <span id="pageInfo">Page 1</span>
+    <button onclick="nextPage()" id="nextBtn">Next ➡</button>
+  </div>
+
+  <script src="index.js">
+    
+  </script>
+
+</body>
+</html>

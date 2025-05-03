@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>PICT Mobile Site</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+  <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+  <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+<body>
+
+<!-- Home Page -->
+<div data-role="page" id="home" data-transition="fade">
+  <div data-role="header">
+    <h1>PICT, Pune</h1>
+  </div>
+
+  <div data-role="navbar">
+    <ul>
+      <li><a href="#about" data-transition="slide">About Us</a></li>
+      <li><a href="#courses" data-transition="slide">Courses</a></li>
+      <li><a href="#departments" data-transition="slide">Departments</a></li>
+      <li><a href="#contact" data-transition="slide">Contact</a></li>
+    </ul>
+  </div>
+
+  <div data-role="content">
+    <h2>Welcome to PICT</h2>
+    <p>Pune Institute of Computer Technology (PICT) is a leading private engineering college in Pune.</p>
+  </div>
+</div>
+
+<!-- About Us Page -->
+<div data-role="page" id="about" data-transition="fade">
+  <div data-role="header">
+    <h1>About Us</h1>
+    <a href="#home" data-icon="home" data-iconpos="notext">Home</a>
+  </div>
+
+  <div data-role="content">
+    <p>PICT was established in 1983 and is renowned for excellence in computer engineering and research.</p>
+    <p>The campus offers state-of-the-art infrastructure and a vibrant student culture.</p>
+  </div>
+</div>
+
+<!-- Courses Offered Page -->
+<div data-role="page" id="courses" data-transition="fade">
+  <div data-role="header">
+    <h1>Courses Offered</h1>
+    <a href="#home" data-icon="home" data-iconpos="notext">Home</a>
+  </div>
+
+  <div data-role="content">
+    <div data-role="collapsible">
+      <h4>Undergraduate Courses</h4>
+      <ul>
+        <li>Computer Engineering</li>
+        <li>Information Technology</li>
+        <li>Electronics and Telecommunication Engineering</li>
+      </ul>
+    </div>
+
+    <div data-role="collapsible">
+      <h4>Postgraduate Courses</h4>
+      <ul>
+        <li>ME in Computer Engineering</li>
+        <li>ME in Electronics (VLSI)</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- Departments Page -->
+<div data-role="page" id="departments" data-transition="fade">
+  <div data-role="header">
+    <h1>Departments</h1>
+    <a href="#home" data-icon="home" data-iconpos="notext">Home</a>
+  </div>
+
+  <div data-role="content">
+    <div data-role="collapsible-set">
+      <div data-role="collapsible">
+        <h4>Computer Engineering</h4>
+        <p>Focuses on programming, algorithms, AI/ML, and systems.</p>
+      </div>
+      <div data-role="collapsible">
+        <h4>Information Technology</h4>
+        <p>Includes data science, cloud computing, and software engineering.</p>
+      </div>
+      <div data-role="collapsible">
+        <h4>Electronics & Telecommunication</h4>
+        <p>Specializes in VLSI, signal processing, IoT, and embedded systems.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Contact Page -->
+<div data-role="page" id="contact" data-transition="fade">
+  <div data-role="header">
+    <h1>Contact Information</h1>
+    <a href="#home" data-icon="home" data-iconpos="notext">Home</a>
+  </div>
+
+  <div data-role="content">
+    <p><strong>Address:</strong> Survey No. 27, Dhankawadi, Pune, Maharashtra 411043</p>
+    <p><strong>Phone:</strong> +91-20-24371101</p>
+    <p><strong>Email:</strong> info@pict.edu</p>
+    <p><strong>Website:</strong> <a href="https://pict.edu" target="_blank">https://pict.edu</a></p>
+  </div>
+</div>
+
+</body>
+</html>
