@@ -5,7 +5,7 @@ const path = require('path');
 const app = express();
 const PORT = 3000;
 
-app.use(express.static(path.join(__dirname,'public'))); // serve frontend from /public folder
+app.use(express.static(path.join(__dirname,'public'))); 
 
 // API to return user data
 // app.get('/api/users', (req, res) => {

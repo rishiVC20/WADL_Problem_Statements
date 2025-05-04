@@ -1,0 +1,24 @@
+<p>todo works!</p>
+<div class="container mt-4">
+    <h2 class="text-center">Angular To-Do List</h2>
+  
+    <!-- Add/Edit Task -->
+    <div class="input-group mb-3">
+      <input [(ngModel)]="taskText" class="form-control" placeholder="Enter task" />
+      <button (click)="addOrUpdateTask()" class="btn btn-primary">
+        {{ isEditing ? 'Update' : 'Add' }}
+      </button>
+    </div>
+  
+    <!-- Task List -->
+    <ul class="list-group">
+      <li *ngFor="let task of tasks; let i = index" class="list-group-item d-flex justify-content-between">
+        <span>{{ task }}</span>
+        <div>
+          <button (click)="editTask(i)" class="btn btn-warning btn-sm me-2">Edit</button>
+          <button (click)="deleteTask(i)" class="btn btn-danger btn-sm">Delete</button>
+        </div>
+      </li>
+    </ul>
+  </div>
+  
