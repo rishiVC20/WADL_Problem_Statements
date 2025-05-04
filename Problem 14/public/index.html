@@ -1,13 +1,63 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>User List</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    h2 {
+      color: darkblue;
+    }
+    ul {
+      padding-left: 20px;
+    }
+    li {
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h2>User List</h2>
+  <ul id="userList"></ul>
+
+  <script>
+    window.onload = function () {
+      var xhr = new XMLHttpRequest();
+      xhr.open('GET', '/api/users', true);
+      xhr.onload = function () {
+        if (xhr.status === 200) {
+          var users = JSON.parse(xhr.responseText);
+          var list = document.getElementById('userList');
+          users.forEach(function (user) {
+            var li = document.createElement('li');
+            li.innerHTML = "<strong>" + user.name + "</strong> - " + user.email;
+            list.appendChild(li);
+          });
+        }
+      };
+      xhr.send();
+    };
+  </script>
+</body>
+</html> -->
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
   <title>User List</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Users</h1>
+  <h2>User List</h2>
   <ul id="userList"></ul>
 
-  <script src="script.js"></script>
+  <script src="script.js">
+    
+  </script>
 </body>
 </html>

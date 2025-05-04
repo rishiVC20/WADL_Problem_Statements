@@ -32,6 +32,12 @@ const products = [
       `;
       tableBody.appendChild(row);
     });
+    // for(const i=start; i<end && i<products.length; i++){
+    //   const product=products[i];
+    //   const row=document.createElement('tr');
+    //   row.innerHTML=`<td ><img src="${product.image}"></td>`
+    //   tableBody.appendChild(row)
+    // }
 
     document.getElementById('pageInfo').innerText = `Page ${currentPage} of ${Math.ceil(products.length / rowsPerPage)}`;
     document.getElementById('prevBtn').disabled = currentPage === 1;

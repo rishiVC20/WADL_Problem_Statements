@@ -1,22 +1,19 @@
 [
     {
-        "id":1,
-        "name":"Rishi",
-        "email":"rishivc20@gmail.com"
+      "name": "Ravi Sharma",
+      "email": "ravi@example.com"
     },
     {
-        "id":2,
-        "name":"Aastha",
-        "email":"aasthach@gmail.com"
+      "name": "Sneha Patil",
+      "email": "sneha@example.com"
     },
     {
-        "id":3,
-        "name":"Gaurav",
-        "email":"gauravm@gmail.com"
+      "name": "Amit Kulkarni",
+      "email": "amit@example.com"
     },
     {
-        "id":4,
-        "name":"Virat",
-        "email":"vk18@gmail.com"
+        "name": "Aastha",
+        "email": "aasthac@example.com"
     }
-]
+  ]
+  

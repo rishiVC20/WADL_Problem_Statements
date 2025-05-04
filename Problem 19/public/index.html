@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Student Marks</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Student Marks Dashboard</h1>
+  <button onclick="loadAll()">Load All</button>
+  <button onclick="loadDSBDA()">>20 DSBDA</button>
+  <button onclick="loadTop()">>25 All</button>
+  <button onclick="loadWeak()">Weak Students</button>
+  <button onclick="updateMarks()">Update Roll 111</button>
+  <button onclick="deleteStudent()">Delete Roll 113</button>
+
+  <table border="1" id="table">
+    <thead>
+      <tr>
+        <th>Name</th><th>Roll</th><th>WAD</th><th>DSBDA</th><th>CNS</th><th>CC</th><th>AI</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+  <script>
+    function renderTable(data) {
+      const tbody = document.querySelector('tbody');
+      tbody.innerHTML = '';
+      data.forEach(s => {
+        tbody.innerHTML += `<tr>
+          <td>${s.Name}</td><td>${s.Roll_No}</td><td>${s.WAD_Marks}</td>
+          <td>${s.DSBDA_Marks}</td><td>${s.CNS_Marks}</td><td>${s.CC_Marks}</td><td>${s.AI_Marks}</td>
+        </tr>`;
+      });
+    }
+
+    async function loadAll() {
+      const res = await fetch('/api/students');
+      const data = await res.json();
+      renderTable(data.students);
+    }
+
+    async function loadDSBDA() {
+      const res = await fetch('/api/dsbda');
+      const data = await res.json();
+      renderTable(data);
+    }
+
+    async function loadTop() {
+      const res = await fetch('/api/topall');
+      const data = await res.json();
+      renderTable(data);
+    }
+
+    async function loadWeak() {
+      const res = await fetch('/api/weak');
+      const data = await res.json();
+      renderTable(data);
+    }
+
+    async function updateMarks() {
+      const res = await fetch('/api/update/111', { method: 'PUT' });
+      alert(await res.text());
+      loadAll();
+    }
+
+    async function deleteStudent() {
+      const res = await fetch('/api/delete/113', { method: 'DELETE' });
+      alert(await res.text());
+      loadAll();
+    }
+  </script>
+</body>
+</html>
