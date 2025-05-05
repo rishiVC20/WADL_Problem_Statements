@@ -1,45 +1,43 @@
-// import { Component } from '@angular/core';
-// import { RouterOutlet } from '@angular/router';
-
-// @Component({
-//   selector: 'app-root',
-//   imports: [RouterOutlet],
-//   templateUrl: './app.component.html',
-//   styleUrl: './app.component.css'
-// })
-// export class AppComponent {
-//   title = 'todo-app';
-// }
 
 
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet , FormsModule , CommonModule],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrls: ['./app.component.css'],
+  imports: [FormsModule, CommonModule]
 })
 export class AppComponent {
-  title = 'todo-app-Angular';
-  tasks: { text: string; done: boolean }[] = [];
-  newTask: string = '';
+  taskText: string = '';
+  tasks: string[] = [];
+  editIndex: number = -1;
 
   addTask() {
-    if (this.newTask.trim()) {
-      this.tasks.push({ text: this.newTask.trim(), done: false });
-      this.newTask = '';
+    if (!this.taskText.trim()) return;
+
+    if (this.editIndex === -1) {
+      this.tasks.push(this.taskText.trim());
+    } else {
+      this.tasks[this.editIndex] = this.taskText.trim();
+      this.editIndex = -1;
     }
+
+    this.taskText = '';
+  }
+
+  editTask(index: number) {
+    this.taskText = this.tasks[index];
+    this.editIndex = index;
   }
 
   deleteTask(index: number) {
     this.tasks.splice(index, 1);
-  }
-
-  toggleDone(index: number) {
-    this.tasks[index].done = !this.tasks[index].done;
+    if (this.editIndex === index) {
+      this.taskText = '';
+      this.editIndex = -1;
+    }
   }
 }
